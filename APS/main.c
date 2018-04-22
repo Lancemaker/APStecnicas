@@ -125,7 +125,13 @@ void removeContato(int *i,char (*nome)[MAX],char (*telefone)[MAX]){
         *telefone[*i] = '\0';
         (*i)++;
     }
+    *i=0;
+    while(*nome[*i]!='\0'){// este while retorna o i para a primeira posicao vazia do array.
+        (*i)++;
+    }
     printf("Contato apagado!!!\n\n");
+
+
 }
 
 void listaContatos(char (*nome)[MAX],char (*telefone)[MAX]){//lista todos os contatos.
